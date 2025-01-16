@@ -1,0 +1,634 @@
+Imports Microsoft.VisualBasic.Compatibility
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> Partial Class frmParamCustSchdVsOurSchd
+#Region "Windows Form Designer generated code "
+	<System.Diagnostics.DebuggerNonUserCode()> Public Sub New()
+		MyBase.New()
+		'This call is required by the Windows Form Designer.
+		InitializeComponent()
+        'This form is an MDI child.
+        'This code simulates the VB6 
+        ' functionality of automatically
+        ' loading and showing an MDI
+        ' child's parent.
+
+
+        VB6_AddADODataBinding()
+	End Sub
+	'Form overrides dispose to clean up the component list.
+	<System.Diagnostics.DebuggerNonUserCode()> Protected Overloads Overrides Sub Dispose(ByVal Disposing As Boolean)
+		If Disposing Then
+			VB6_RemoveADODataBinding()
+			If Not components Is Nothing Then
+				components.Dispose()
+			End If
+		End If
+		MyBase.Dispose(Disposing)
+	End Sub
+	'Required by the Windows Form Designer
+	Private components As System.ComponentModel.IContainer
+	Public ToolTip1 As System.Windows.Forms.ToolTip
+	Public WithEvents TxtItemName As System.Windows.Forms.TextBox
+	Public WithEvents txtSupplier As System.Windows.Forms.TextBox
+	Public WithEvents cmdsearchSupp As System.Windows.Forms.Button
+	Public WithEvents chkAllSupp As System.Windows.Forms.CheckBox
+	Public WithEvents chkAll As System.Windows.Forms.CheckBox
+	Public WithEvents cmdsearch As System.Windows.Forms.Button
+	Public WithEvents Label5 As System.Windows.Forms.Label
+	Public WithEvents Label2 As System.Windows.Forms.Label
+	Public WithEvents FraAccount As System.Windows.Forms.GroupBox
+    Public WithEvents Frame6 As System.Windows.Forms.GroupBox
+    Public WithEvents SprdMain As AxFPSpreadADO.AxfpSpread
+    Public WithEvents Report1 As AxCrystal.AxCrystalReport
+	Public WithEvents Frame4 As System.Windows.Forms.GroupBox
+	Public WithEvents CmdPreview As System.Windows.Forms.Button
+	Public WithEvents cmdPrint As System.Windows.Forms.Button
+	Public WithEvents cmdClose As System.Windows.Forms.Button
+	Public WithEvents cmdShow As System.Windows.Forms.Button
+	Public WithEvents FraMovement As System.Windows.Forms.GroupBox
+	Public WithEvents Lbl As Microsoft.VisualBasic.Compatibility.VB6.LabelArray
+	'NOTE: The following procedure is required by the Windows Form Designer
+	'It can be modified using the Windows Form Designer.
+	'Do not modify it using the code editor.
+	<System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmParamCustSchdVsOurSchd))
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.TxtItemName = New System.Windows.Forms.TextBox()
+        Me.txtSupplier = New System.Windows.Forms.TextBox()
+        Me.cmdsearchSupp = New System.Windows.Forms.Button()
+        Me.cmdsearch = New System.Windows.Forms.Button()
+        Me.CmdPreview = New System.Windows.Forms.Button()
+        Me.cmdPrint = New System.Windows.Forms.Button()
+        Me.cmdClose = New System.Windows.Forms.Button()
+        Me.cmdShow = New System.Windows.Forms.Button()
+        Me.txtLoc = New System.Windows.Forms.TextBox()
+        Me.txtModel = New System.Windows.Forms.TextBox()
+        Me.cmdSearchModel = New System.Windows.Forms.Button()
+        Me.cmdSearchLoc = New System.Windows.Forms.Button()
+        Me.cmdGenerateSchedule = New System.Windows.Forms.Button()
+        Me.FraAccount = New System.Windows.Forms.GroupBox()
+        Me.chkAllModel = New System.Windows.Forms.CheckBox()
+        Me.chkAllLoc = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.chkAllSupp = New System.Windows.Forms.CheckBox()
+        Me.chkAll = New System.Windows.Forms.CheckBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Frame6 = New System.Windows.Forms.GroupBox()
+        Me.lblYear = New System.Windows.Forms.DateTimePicker()
+        Me.Frame4 = New System.Windows.Forms.GroupBox()
+        Me.SprdMain = New AxFPSpreadADO.AxfpSpread()
+        Me.Report1 = New AxCrystal.AxCrystalReport()
+        Me.FraMovement = New System.Windows.Forms.GroupBox()
+        Me.Lbl = New Microsoft.VisualBasic.Compatibility.VB6.LabelArray(Me.components)
+        Me.Frame7 = New System.Windows.Forms.GroupBox()
+        Me._optShow_1 = New System.Windows.Forms.RadioButton()
+        Me._optShow_0 = New System.Windows.Forms.RadioButton()
+        Me.optShow = New Microsoft.VisualBasic.Compatibility.VB6.RadioButtonArray(Me.components)
+        Me.FraAccount.SuspendLayout()
+        Me.Frame6.SuspendLayout()
+        Me.Frame4.SuspendLayout()
+        CType(Me.SprdMain, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Report1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FraMovement.SuspendLayout()
+        CType(Me.Lbl, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Frame7.SuspendLayout()
+        CType(Me.optShow, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'TxtItemName
+        '
+        Me.TxtItemName.AcceptsReturn = True
+        Me.TxtItemName.BackColor = System.Drawing.SystemColors.Window
+        Me.TxtItemName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtItemName.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtItemName.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.TxtItemName.Location = New System.Drawing.Point(67, 36)
+        Me.TxtItemName.MaxLength = 0
+        Me.TxtItemName.Name = "TxtItemName"
+        Me.TxtItemName.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.TxtItemName.Size = New System.Drawing.Size(289, 20)
+        Me.TxtItemName.TabIndex = 20
+        Me.ToolTip1.SetToolTip(Me.TxtItemName, "Press F1 For Help")
+        '
+        'txtSupplier
+        '
+        Me.txtSupplier.AcceptsReturn = True
+        Me.txtSupplier.BackColor = System.Drawing.SystemColors.Window
+        Me.txtSupplier.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSupplier.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtSupplier.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.txtSupplier.Location = New System.Drawing.Point(67, 14)
+        Me.txtSupplier.MaxLength = 0
+        Me.txtSupplier.Name = "txtSupplier"
+        Me.txtSupplier.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtSupplier.Size = New System.Drawing.Size(289, 20)
+        Me.txtSupplier.TabIndex = 18
+        Me.ToolTip1.SetToolTip(Me.txtSupplier, "Press F1 For Help")
+        '
+        'cmdsearchSupp
+        '
+        Me.cmdsearchSupp.BackColor = System.Drawing.SystemColors.Menu
+        Me.cmdsearchSupp.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdsearchSupp.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdsearchSupp.Image = CType(resources.GetObject("cmdsearchSupp.Image"), System.Drawing.Image)
+        Me.cmdsearchSupp.Location = New System.Drawing.Point(358, 14)
+        Me.cmdsearchSupp.Name = "cmdsearchSupp"
+        Me.cmdsearchSupp.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdsearchSupp.Size = New System.Drawing.Size(29, 19)
+        Me.cmdsearchSupp.TabIndex = 17
+        Me.cmdsearchSupp.TabStop = False
+        Me.cmdsearchSupp.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.cmdsearchSupp, "Search")
+        Me.cmdsearchSupp.UseVisualStyleBackColor = False
+        '
+        'cmdsearch
+        '
+        Me.cmdsearch.BackColor = System.Drawing.SystemColors.Menu
+        Me.cmdsearch.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdsearch.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdsearch.Image = CType(resources.GetObject("cmdsearch.Image"), System.Drawing.Image)
+        Me.cmdsearch.Location = New System.Drawing.Point(358, 36)
+        Me.cmdsearch.Name = "cmdsearch"
+        Me.cmdsearch.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdsearch.Size = New System.Drawing.Size(29, 19)
+        Me.cmdsearch.TabIndex = 2
+        Me.cmdsearch.TabStop = False
+        Me.cmdsearch.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.cmdsearch, "Search")
+        Me.cmdsearch.UseVisualStyleBackColor = False
+        '
+        'CmdPreview
+        '
+        Me.CmdPreview.BackColor = System.Drawing.SystemColors.Control
+        Me.CmdPreview.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CmdPreview.Enabled = False
+        Me.CmdPreview.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.CmdPreview.Image = CType(resources.GetObject("CmdPreview.Image"), System.Drawing.Image)
+        Me.CmdPreview.Location = New System.Drawing.Point(123, 9)
+        Me.CmdPreview.Name = "CmdPreview"
+        Me.CmdPreview.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.CmdPreview.Size = New System.Drawing.Size(60, 37)
+        Me.CmdPreview.TabIndex = 7
+        Me.CmdPreview.Text = "Pre&view"
+        Me.CmdPreview.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.CmdPreview, "Print Preview")
+        Me.CmdPreview.UseVisualStyleBackColor = False
+        '
+        'cmdPrint
+        '
+        Me.cmdPrint.BackColor = System.Drawing.SystemColors.Control
+        Me.cmdPrint.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdPrint.Enabled = False
+        Me.cmdPrint.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdPrint.Image = CType(resources.GetObject("cmdPrint.Image"), System.Drawing.Image)
+        Me.cmdPrint.Location = New System.Drawing.Point(63, 9)
+        Me.cmdPrint.Name = "cmdPrint"
+        Me.cmdPrint.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdPrint.Size = New System.Drawing.Size(60, 37)
+        Me.cmdPrint.TabIndex = 6
+        Me.cmdPrint.Text = "&Print"
+        Me.cmdPrint.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.cmdPrint, "Print List")
+        Me.cmdPrint.UseVisualStyleBackColor = False
+        '
+        'cmdClose
+        '
+        Me.cmdClose.BackColor = System.Drawing.SystemColors.Control
+        Me.cmdClose.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdClose.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdClose.Image = CType(resources.GetObject("cmdClose.Image"), System.Drawing.Image)
+        Me.cmdClose.Location = New System.Drawing.Point(184, 9)
+        Me.cmdClose.Name = "cmdClose"
+        Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdClose.Size = New System.Drawing.Size(60, 37)
+        Me.cmdClose.TabIndex = 8
+        Me.cmdClose.Text = "&Close"
+        Me.cmdClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.cmdClose, "Close the Form")
+        Me.cmdClose.UseVisualStyleBackColor = False
+        '
+        'cmdShow
+        '
+        Me.cmdShow.BackColor = System.Drawing.SystemColors.Control
+        Me.cmdShow.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdShow.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdShow.Image = CType(resources.GetObject("cmdShow.Image"), System.Drawing.Image)
+        Me.cmdShow.Location = New System.Drawing.Point(4, 9)
+        Me.cmdShow.Name = "cmdShow"
+        Me.cmdShow.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdShow.Size = New System.Drawing.Size(60, 37)
+        Me.cmdShow.TabIndex = 5
+        Me.cmdShow.Text = "Sho&w"
+        Me.cmdShow.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.cmdShow, "Show Record")
+        Me.cmdShow.UseVisualStyleBackColor = False
+        '
+        'txtLoc
+        '
+        Me.txtLoc.AcceptsReturn = True
+        Me.txtLoc.BackColor = System.Drawing.SystemColors.Window
+        Me.txtLoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtLoc.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtLoc.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.txtLoc.Location = New System.Drawing.Point(492, 36)
+        Me.txtLoc.MaxLength = 0
+        Me.txtLoc.Name = "txtLoc"
+        Me.txtLoc.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtLoc.Size = New System.Drawing.Size(52, 20)
+        Me.txtLoc.TabIndex = 28
+        Me.ToolTip1.SetToolTip(Me.txtLoc, "Press F1 For Help")
+        '
+        'txtModel
+        '
+        Me.txtModel.AcceptsReturn = True
+        Me.txtModel.BackColor = System.Drawing.SystemColors.Window
+        Me.txtModel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtModel.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtModel.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.txtModel.Location = New System.Drawing.Point(492, 14)
+        Me.txtModel.MaxLength = 0
+        Me.txtModel.Name = "txtModel"
+        Me.txtModel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtModel.Size = New System.Drawing.Size(52, 20)
+        Me.txtModel.TabIndex = 26
+        Me.ToolTip1.SetToolTip(Me.txtModel, "Press F1 For Help")
+        '
+        'cmdSearchModel
+        '
+        Me.cmdSearchModel.BackColor = System.Drawing.SystemColors.Menu
+        Me.cmdSearchModel.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdSearchModel.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdSearchModel.Image = CType(resources.GetObject("cmdSearchModel.Image"), System.Drawing.Image)
+        Me.cmdSearchModel.Location = New System.Drawing.Point(546, 14)
+        Me.cmdSearchModel.Name = "cmdSearchModel"
+        Me.cmdSearchModel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdSearchModel.Size = New System.Drawing.Size(29, 19)
+        Me.cmdSearchModel.TabIndex = 25
+        Me.cmdSearchModel.TabStop = False
+        Me.cmdSearchModel.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.cmdSearchModel, "Search")
+        Me.cmdSearchModel.UseVisualStyleBackColor = False
+        '
+        'cmdSearchLoc
+        '
+        Me.cmdSearchLoc.BackColor = System.Drawing.SystemColors.Menu
+        Me.cmdSearchLoc.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdSearchLoc.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdSearchLoc.Image = CType(resources.GetObject("cmdSearchLoc.Image"), System.Drawing.Image)
+        Me.cmdSearchLoc.Location = New System.Drawing.Point(546, 36)
+        Me.cmdSearchLoc.Name = "cmdSearchLoc"
+        Me.cmdSearchLoc.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdSearchLoc.Size = New System.Drawing.Size(29, 19)
+        Me.cmdSearchLoc.TabIndex = 21
+        Me.cmdSearchLoc.TabStop = False
+        Me.cmdSearchLoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.cmdSearchLoc, "Search")
+        Me.cmdSearchLoc.UseVisualStyleBackColor = False
+        '
+        'cmdGenerateSchedule
+        '
+        Me.cmdGenerateSchedule.BackColor = System.Drawing.SystemColors.Control
+        Me.cmdGenerateSchedule.Cursor = System.Windows.Forms.Cursors.Default
+        Me.cmdGenerateSchedule.Enabled = False
+        Me.cmdGenerateSchedule.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cmdGenerateSchedule.Location = New System.Drawing.Point(290, 424)
+        Me.cmdGenerateSchedule.Name = "cmdGenerateSchedule"
+        Me.cmdGenerateSchedule.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdGenerateSchedule.Size = New System.Drawing.Size(160, 29)
+        Me.cmdGenerateSchedule.TabIndex = 42
+        Me.cmdGenerateSchedule.Text = "Generate Delivery Schedule"
+        Me.ToolTip1.SetToolTip(Me.cmdGenerateSchedule, "Show Record")
+        Me.cmdGenerateSchedule.UseVisualStyleBackColor = False
+        '
+        'FraAccount
+        '
+        Me.FraAccount.BackColor = System.Drawing.SystemColors.Control
+        Me.FraAccount.Controls.Add(Me.txtLoc)
+        Me.FraAccount.Controls.Add(Me.txtModel)
+        Me.FraAccount.Controls.Add(Me.cmdSearchModel)
+        Me.FraAccount.Controls.Add(Me.chkAllModel)
+        Me.FraAccount.Controls.Add(Me.chkAllLoc)
+        Me.FraAccount.Controls.Add(Me.cmdSearchLoc)
+        Me.FraAccount.Controls.Add(Me.Label1)
+        Me.FraAccount.Controls.Add(Me.Label3)
+        Me.FraAccount.Controls.Add(Me.TxtItemName)
+        Me.FraAccount.Controls.Add(Me.txtSupplier)
+        Me.FraAccount.Controls.Add(Me.cmdsearchSupp)
+        Me.FraAccount.Controls.Add(Me.chkAllSupp)
+        Me.FraAccount.Controls.Add(Me.chkAll)
+        Me.FraAccount.Controls.Add(Me.cmdsearch)
+        Me.FraAccount.Controls.Add(Me.Label5)
+        Me.FraAccount.Controls.Add(Me.Label2)
+        Me.FraAccount.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.FraAccount.Location = New System.Drawing.Point(122, -2)
+        Me.FraAccount.Name = "FraAccount"
+        Me.FraAccount.Padding = New System.Windows.Forms.Padding(0)
+        Me.FraAccount.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.FraAccount.Size = New System.Drawing.Size(627, 61)
+        Me.FraAccount.TabIndex = 12
+        Me.FraAccount.TabStop = False
+        '
+        'chkAllModel
+        '
+        Me.chkAllModel.AutoSize = True
+        Me.chkAllModel.BackColor = System.Drawing.SystemColors.Control
+        Me.chkAllModel.Checked = True
+        Me.chkAllModel.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkAllModel.Cursor = System.Windows.Forms.Cursors.Default
+        Me.chkAllModel.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.chkAllModel.Location = New System.Drawing.Point(576, 16)
+        Me.chkAllModel.Name = "chkAllModel"
+        Me.chkAllModel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.chkAllModel.Size = New System.Drawing.Size(45, 17)
+        Me.chkAllModel.TabIndex = 24
+        Me.chkAllModel.Text = "ALL"
+        Me.chkAllModel.UseVisualStyleBackColor = False
+        '
+        'chkAllLoc
+        '
+        Me.chkAllLoc.AutoSize = True
+        Me.chkAllLoc.BackColor = System.Drawing.SystemColors.Control
+        Me.chkAllLoc.Checked = True
+        Me.chkAllLoc.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkAllLoc.Cursor = System.Windows.Forms.Cursors.Default
+        Me.chkAllLoc.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.chkAllLoc.Location = New System.Drawing.Point(576, 38)
+        Me.chkAllLoc.Name = "chkAllLoc"
+        Me.chkAllLoc.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.chkAllLoc.Size = New System.Drawing.Size(45, 17)
+        Me.chkAllLoc.TabIndex = 22
+        Me.chkAllLoc.Text = "ALL"
+        Me.chkAllLoc.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.Control
+        Me.Label1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label1.Location = New System.Drawing.Point(446, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label1.Size = New System.Drawing.Size(42, 13)
+        Me.Label1.TabIndex = 27
+        Me.Label1.Text = "Model :"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.SystemColors.Control
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label3.Location = New System.Drawing.Point(457, 40)
+        Me.Label3.Name = "Label3"
+        Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label3.Size = New System.Drawing.Size(31, 13)
+        Me.Label3.TabIndex = 23
+        Me.Label3.Text = "Loc :"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'chkAllSupp
+        '
+        Me.chkAllSupp.AutoSize = True
+        Me.chkAllSupp.BackColor = System.Drawing.SystemColors.Control
+        Me.chkAllSupp.Checked = True
+        Me.chkAllSupp.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkAllSupp.Cursor = System.Windows.Forms.Cursors.Default
+        Me.chkAllSupp.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.chkAllSupp.Location = New System.Drawing.Point(388, 16)
+        Me.chkAllSupp.Name = "chkAllSupp"
+        Me.chkAllSupp.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.chkAllSupp.Size = New System.Drawing.Size(45, 17)
+        Me.chkAllSupp.TabIndex = 16
+        Me.chkAllSupp.Text = "ALL"
+        Me.chkAllSupp.UseVisualStyleBackColor = False
+        '
+        'chkAll
+        '
+        Me.chkAll.AutoSize = True
+        Me.chkAll.BackColor = System.Drawing.SystemColors.Control
+        Me.chkAll.Checked = True
+        Me.chkAll.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkAll.Cursor = System.Windows.Forms.Cursors.Default
+        Me.chkAll.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.chkAll.Location = New System.Drawing.Point(388, 38)
+        Me.chkAll.Name = "chkAll"
+        Me.chkAll.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.chkAll.Size = New System.Drawing.Size(45, 17)
+        Me.chkAll.TabIndex = 3
+        Me.chkAll.Text = "ALL"
+        Me.chkAll.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.SystemColors.Control
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label5.Location = New System.Drawing.Point(11, 16)
+        Me.Label5.Name = "Label5"
+        Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label5.Size = New System.Drawing.Size(57, 13)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = "Customer :"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label2.Location = New System.Drawing.Point(4, 38)
+        Me.Label2.Name = "Label2"
+        Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label2.Size = New System.Drawing.Size(64, 13)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "Item Name :"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Frame6
+        '
+        Me.Frame6.BackColor = System.Drawing.SystemColors.Control
+        Me.Frame6.Controls.Add(Me.lblYear)
+        Me.Frame6.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Frame6.Location = New System.Drawing.Point(0, -2)
+        Me.Frame6.Name = "Frame6"
+        Me.Frame6.Padding = New System.Windows.Forms.Padding(0)
+        Me.Frame6.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Frame6.Size = New System.Drawing.Size(121, 61)
+        Me.Frame6.TabIndex = 9
+        Me.Frame6.TabStop = False
+        Me.Frame6.Text = "Date"
+        '
+        'lblYear
+        '
+        Me.lblYear.CustomFormat = "MMMM,yyyy"
+        Me.lblYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.lblYear.Location = New System.Drawing.Point(2, 22)
+        Me.lblYear.Name = "lblYear"
+        Me.lblYear.Size = New System.Drawing.Size(114, 20)
+        Me.lblYear.TabIndex = 37
+        '
+        'Frame4
+        '
+        Me.Frame4.BackColor = System.Drawing.SystemColors.Control
+        Me.Frame4.Controls.Add(Me.SprdMain)
+        Me.Frame4.Controls.Add(Me.Report1)
+        Me.Frame4.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Frame4.Location = New System.Drawing.Point(0, 54)
+        Me.Frame4.Name = "Frame4"
+        Me.Frame4.Padding = New System.Windows.Forms.Padding(0)
+        Me.Frame4.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Frame4.Size = New System.Drawing.Size(749, 361)
+        Me.Frame4.TabIndex = 13
+        Me.Frame4.TabStop = False
+        '
+        'SprdMain
+        '
+        Me.SprdMain.DataSource = Nothing
+        Me.SprdMain.Location = New System.Drawing.Point(2, 8)
+        Me.SprdMain.Name = "SprdMain"
+        Me.SprdMain.OcxState = CType(resources.GetObject("SprdMain.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.SprdMain.Size = New System.Drawing.Size(744, 349)
+        Me.SprdMain.TabIndex = 4
+        '
+        'Report1
+        '
+        Me.Report1.Enabled = True
+        Me.Report1.Location = New System.Drawing.Point(24, 70)
+        Me.Report1.Name = "Report1"
+        Me.Report1.OcxState = CType(resources.GetObject("Report1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.Report1.Size = New System.Drawing.Size(28, 28)
+        Me.Report1.TabIndex = 5
+        '
+        'FraMovement
+        '
+        Me.FraMovement.BackColor = System.Drawing.SystemColors.Control
+        Me.FraMovement.Controls.Add(Me.CmdPreview)
+        Me.FraMovement.Controls.Add(Me.cmdPrint)
+        Me.FraMovement.Controls.Add(Me.cmdClose)
+        Me.FraMovement.Controls.Add(Me.cmdShow)
+        Me.FraMovement.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.FraMovement.Location = New System.Drawing.Point(502, 410)
+        Me.FraMovement.Name = "FraMovement"
+        Me.FraMovement.Padding = New System.Windows.Forms.Padding(0)
+        Me.FraMovement.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.FraMovement.Size = New System.Drawing.Size(247, 49)
+        Me.FraMovement.TabIndex = 14
+        Me.FraMovement.TabStop = False
+        '
+        'Frame7
+        '
+        Me.Frame7.BackColor = System.Drawing.SystemColors.Control
+        Me.Frame7.Controls.Add(Me._optShow_1)
+        Me.Frame7.Controls.Add(Me._optShow_0)
+        Me.Frame7.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Frame7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Frame7.Location = New System.Drawing.Point(2, 416)
+        Me.Frame7.Name = "Frame7"
+        Me.Frame7.Padding = New System.Windows.Forms.Padding(0)
+        Me.Frame7.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Frame7.Size = New System.Drawing.Size(224, 39)
+        Me.Frame7.TabIndex = 41
+        Me.Frame7.TabStop = False
+        '
+        '_optShow_1
+        '
+        Me._optShow_1.BackColor = System.Drawing.SystemColors.Control
+        Me._optShow_1.Cursor = System.Windows.Forms.Cursors.Default
+        Me._optShow_1.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me._optShow_1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.optShow.SetIndex(Me._optShow_1, CType(1, Short))
+        Me._optShow_1.Location = New System.Drawing.Point(121, 14)
+        Me._optShow_1.Name = "_optShow_1"
+        Me._optShow_1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me._optShow_1.Size = New System.Drawing.Size(91, 17)
+        Me._optShow_1.TabIndex = 42
+        Me._optShow_1.TabStop = True
+        Me._optShow_1.Text = "Summarised"
+        Me._optShow_1.UseVisualStyleBackColor = False
+        '
+        '_optShow_0
+        '
+        Me._optShow_0.BackColor = System.Drawing.SystemColors.Control
+        Me._optShow_0.Checked = True
+        Me._optShow_0.Cursor = System.Windows.Forms.Cursors.Default
+        Me._optShow_0.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me._optShow_0.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.optShow.SetIndex(Me._optShow_0, CType(0, Short))
+        Me._optShow_0.Location = New System.Drawing.Point(8, 12)
+        Me._optShow_0.Name = "_optShow_0"
+        Me._optShow_0.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me._optShow_0.Size = New System.Drawing.Size(57, 17)
+        Me._optShow_0.TabIndex = 41
+        Me._optShow_0.TabStop = True
+        Me._optShow_0.Text = "Detail"
+        Me._optShow_0.UseVisualStyleBackColor = False
+        '
+        'optShow
+        '
+        '
+        'frmParamCustSchdVsOurSchd
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(749, 459)
+        Me.Controls.Add(Me.cmdGenerateSchedule)
+        Me.Controls.Add(Me.Frame7)
+        Me.Controls.Add(Me.FraAccount)
+        Me.Controls.Add(Me.Frame6)
+        Me.Controls.Add(Me.Frame4)
+        Me.Controls.Add(Me.FraMovement)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Location = New System.Drawing.Point(4, 24)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "frmParamCustSchdVsOurSchd"
+        Me.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.Text = "Product Wise Schedule Report"
+        Me.FraAccount.ResumeLayout(False)
+        Me.FraAccount.PerformLayout()
+        Me.Frame6.ResumeLayout(False)
+        Me.Frame4.ResumeLayout(False)
+        CType(Me.SprdMain, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Report1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FraMovement.ResumeLayout(False)
+        CType(Me.Lbl, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Frame7.ResumeLayout(False)
+        CType(Me.optShow, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
+    End Sub
+#End Region
+#Region "Upgrade Support"
+    Public Sub VB6_AddADODataBinding()
+        'SprdMain.DataSource = CType(AData1, MSDATASRC.DataSource)
+    End Sub
+    Public Sub VB6_RemoveADODataBinding()
+        SprdMain.DataSource = Nothing
+    End Sub
+    Public WithEvents txtLoc As TextBox
+    Public WithEvents txtModel As TextBox
+    Public WithEvents cmdSearchModel As Button
+    Public WithEvents chkAllModel As CheckBox
+    Public WithEvents chkAllLoc As CheckBox
+    Public WithEvents cmdSearchLoc As Button
+    Public WithEvents Label1 As Label
+    Public WithEvents Label3 As Label
+    Public WithEvents Frame7 As GroupBox
+    Public WithEvents _optShow_1 As RadioButton
+    Public WithEvents _optShow_0 As RadioButton
+    Friend WithEvents lblYear As DateTimePicker
+    Public WithEvents cmdGenerateSchedule As Button
+    Public WithEvents optShow As VB6.RadioButtonArray
+#End Region
+End Class

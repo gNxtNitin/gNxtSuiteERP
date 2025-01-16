@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Envelope>
+  <Header>
+    <AuthHeader>
+      <Username>rR482Xeoilw</Username>
+      <Password>Rqsie103pd</Password>
+    </AuthHeader>
+  </Header>
+  <Body>
+    <SignPDF>
+      <pdfByte>D:\test_DS.pdf</pdfByte>
+      <AuthorizedSignatory>SANDEEP KANDWAL</AuthorizedSignatory>
+      <SignerName>SANDEEP KANDWAL</SignerName>
+      <TopLeft>100</TopLeft>
+      <BottomLeft>290</BottomLeft>
+      <TopRight>190</TopRight>
+      <BottomRight>340</BottomRight>
+      <ExcludePageNo />
+      <InvoiceNumber />
+      <pageNo>-1</pageNo>
+      <PrintDateTime />
+      <FindAuth />
+      <FindAuthLocation />
+    </SignPDF>
+  </Body>
+</Envelope>

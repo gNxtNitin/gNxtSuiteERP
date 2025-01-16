@@ -1,0 +1,105 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DOTNET_ERP
+</name>
+</assembly>
+<members>
+<member name="T:DOTNET_ERP.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.bookmark">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.bookmark1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.ClientLogo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.colorize">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.colorize1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.Down">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.history">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.history1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.klipper">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.klipper_dock">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.Sales">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.Up">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.wizard">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:DOTNET_ERP.My.Resources.Resources.wizard1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="F:DOTNET_ERP.frmBankReco.RowHeight">
+Private PvtDBCn As ADODB.Connection
+</member>
+<member name="F:DOTNET_ERP.frmParamDNRateDiff.mAccountCode">
+Private PvtDBCn As ADODB.Connection
+</member>
+<member name="F:DOTNET_ERP.frmPnLVoucher.ColPRRowNo">
+Private PvtDBCn As ADODB.Connection
+</member>
+</members>
+</doc>

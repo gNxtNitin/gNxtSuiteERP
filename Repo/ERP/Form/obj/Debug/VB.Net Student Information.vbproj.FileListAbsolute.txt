@@ -1,0 +1,98 @@
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\bin\Debug\VB.Net Student Information.exe
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\bin\Debug\VB.Net Student Information.pdb
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\bin\Debug\VB.Net Student Information.xml
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmAbout.resources
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmCamera.resources
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmEntry.resources
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmMain.resources
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmSearch.resources
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.Resources.resources
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net Student Information.vbproj.GenerateResource.Cache
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net Student Information.exe
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net Student Information.xml
+C:\Documents and Settings\erwin padiernos\Desktop\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net Student Information.pdb
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net Student Information.exe
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net Student Information.xml
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net Student Information.pdb
+F:\VB.Net Student Information\VB.Net Student Information\bin\Debug\VB.Net Student Information.exe
+F:\VB.Net Student Information\VB.Net Student Information\bin\Debug\VB.Net Student Information.pdb
+F:\VB.Net Student Information\VB.Net Student Information\bin\Debug\VB.Net Student Information.xml
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\ResolveAssemblyReference.cache
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmAbout.resources
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmCamera.resources
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmEntry.resources
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmMain.resources
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmSearch.resources
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.Resources.resources
+F:\VB.Net Student Information\VB.Net Student Information\obj\Debug\VB.Net Student Information.vbproj.GenerateResource.Cache
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net Student Information.xml
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net Student Information.pdb
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\bin\Debug\VB.Net Student Information.exe
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\bin\Debug\VB.Net Student Information.pdb
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\bin\Debug\VB.Net Student Information.xml
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\ResolveAssemblyReference.cache
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmAbout.resources
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmCamera.resources
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmEntry.resources
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmMain.resources
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.FrmSearch.resources
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.Resources.resources
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net Student Information.exe
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\bin\Debug\Interop.FPSpreadADO.dll
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\bin\Debug\AxInterop.FPSpreadADO.dll
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\Interop.FPSpreadADO.dll
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\AxInterop.FPSpreadADO.dll
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net Student Information.vbproj.ResolveComReference.cache
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\VB.Net_to_Ms_Access_Student_Information.Form1.resources
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\bin\Debug\Interop.DAO.dll
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\bin\Debug\Interop.MSDASC.dll
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\Interop.DAO.dll
+D:\Surya\Test\VB.Net Student Information\VB.Net Student Informationa\VB.Net Student Information\obj\Debug\Interop.MSDASC.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\Interop.DAO.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\Interop.FPSpreadADO.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\Interop.MSDASC.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\AxInterop.FPSpreadADO.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\VB.Net Student Information.vbproj.ResolveComReference.cache
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\ResolveAssemblyReference.cache
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\Interop.CRAXDDRT.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\Interop.CRAXDRT.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\Interop.CREXPORTLib.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\Interop.CRVIEWER9Lib.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.Form1.resources
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.FormMain.resources
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.FrmLogin.resources
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.frmSearchGrid.resources
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.Resources.resources
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.frmSplash.resources
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.frmUsers.resources
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\SRL_ERP.exe
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\SRL_ERP.pdb
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\SRL_ERP.xml
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\Interop.CRAXDDRT.dll
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\Interop.CRAXDRT.dll
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\Interop.CREXPORTLib.dll
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\Interop.CRVIEWER9Lib.dll
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\Interop.DAO.dll
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\Interop.FPSpreadADO.dll
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\Interop.MSDASC.dll
+D:\Surya\SuryaTest\VB.Net Student Information\bin\Debug\AxInterop.FPSpreadADO.dll
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.exe
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.xml
+D:\Surya\SuryaTest\VB.Net Student Information\obj\Debug\SRL_ERP.pdb
+D:\Surya\SuryaTest\Form\obj\Debug\Interop.CRAXDDRT.dll
+D:\Surya\SuryaTest\Form\obj\Debug\Interop.CRAXDRT.dll
+D:\Surya\SuryaTest\Form\obj\Debug\Interop.CREXPORTLib.dll
+D:\Surya\SuryaTest\Form\obj\Debug\Interop.CRVIEWER9Lib.dll
+D:\Surya\SuryaTest\Form\obj\Debug\Interop.DAO.dll
+D:\Surya\SuryaTest\Form\obj\Debug\Interop.FPSpreadADO.dll
+D:\Surya\SuryaTest\Form\obj\Debug\Interop.MSDASC.dll
+D:\Surya\SuryaTest\Form\obj\Debug\AxInterop.FPSpreadADO.dll
+D:\Surya\SuryaTest\Form\obj\Debug\VB.Net Student Information.vbproj.ResolveComReference.cache
+D:\Surya\SuryaTest\Form\obj\Debug\SRL_ERP.exe
+D:\Surya\SuryaTest\Form\obj\Debug\SRL_ERP.xml
+D:\Surya\SuryaTest\Form\obj\Debug\SRL_ERP.pdb

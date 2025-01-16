@@ -1,0 +1,40 @@
+
+
+***********************************************************************
+Fatal NI connect error 6413, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=103.178.248.182)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=KJCLOUD)(CID=(PROGRAM=C:\Program Files (x86)\Seagate Software\Crystal Reports\crw32.exe)(HOST=WIN-BIKO2FV73GU)(USER=kj.admin2))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 05-SEP-2022 15:20:29
+  Tracing not turned on.
+
+
+***********************************************************************
+Fatal NI connect error 6413, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleORCL)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))')))(CONNECT_DATA=(SID=ORCL)(CID=(PROGRAM=C:\Program Files (x86)\Seagate Software\Crystal Reports\crw32.exe)(HOST=WIN-BIKO2FV73GU)(USER=kj.admin2))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 05-SEP-2022 15:20:29
+  Tracing not turned on.
+
+
+***********************************************************************
+Fatal NI connect error 6413, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=103.178.248.182)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=KJCLOUD)(CID=(PROGRAM=C:\Program Files (x86)\Seagate Software\Crystal Reports\crw32.exe)(HOST=WIN-BIKO2FV73GU)(USER=kj.admin2))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 05-SEP-2022 15:20:48
+  Tracing not turned on.
+
+
+***********************************************************************
+Fatal NI connect error 6413, connecting to:
+ (DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleORCL)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))')))(CONNECT_DATA=(SID=ORCL)(CID=(PROGRAM=C:\Program Files (x86)\Seagate Software\Crystal Reports\crw32.exe)(HOST=WIN-BIKO2FV73GU)(USER=kj.admin2))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 05-SEP-2022 15:20:48
+  Tracing not turned on.

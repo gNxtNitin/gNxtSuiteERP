@@ -1,0 +1,9 @@
+G:\VBDotNetERP\Form\obj\Release\DotNetERP.vbprojResolveAssemblyReference.cache
+G:\VBDotNetERP\Form\obj\Release\Interop.ADOR.dll
+G:\VBDotNetERP\Form\obj\Release\Interop.CDO.dll
+G:\VBDotNetERP\Form\obj\Release\Interop.CRAXDDRT.dll
+G:\VBDotNetERP\Form\obj\Release\Interop.CRAXDRT.dll
+G:\VBDotNetERP\Form\obj\Release\Interop.CREXPORTLib.dll
+G:\VBDotNetERP\Form\obj\Release\Interop.CRVIEWER9Lib.dll
+G:\VBDotNetERP\Form\obj\Release\Interop.DAO.dll
+G:\VBDotNetERP\Form\obj\Release\Interop.MSDASC.dll
