@@ -323,10 +323,10 @@ UpdateError:
         mWorksHours = CDate(VB6.Format(mWorksHours, "HH:mm"))
         mOTHours = CDate(VB6.Format(mOTHours, "HH:mm"))
 
-        mTOTHoursValue = Val(VB.Left(CStr(mTOTHours), 2)) + (CDbl(VB.Right(CStr(mTOTHours), 2)) / 60)
+        mTOTHoursValue = Val(Mid(VB6.Format(mTOTHours, "HH:mm"), 1, 2)) + (Val(Mid(VB6.Format(mTOTHours, "HH:mm"), 4, 2)) / 60) ''Val(VB.Left(CStr(mTOTHours), 2)) + (CDbl(VB.Right(CStr(mTOTHours), 2)) / 60)
 
-        mWorksHoursValue = Val(VB.Left(CStr(mWorksHours), 2)) + (CDbl(VB.Right(CStr(mWorksHours), 2)) / 60)
-        mOTHoursValue = Val(VB.Left(CStr(mOTHours), 2)) + (CDbl(VB.Right(CStr(mOTHours), 2)) / 60)
+        mWorksHoursValue = Val(Mid(VB6.Format(mWorksHours, "HH:mm"), 1, 2)) + (Val(Mid(VB6.Format(mWorksHours, "HH:mm"), 4, 2)) / 60) ''Val(VB.Left(CStr(mWorksHours), 2)) + (CDbl(VB.Right(CStr(mWorksHours), 2)) / 60)
+        mOTHoursValue = Val(Mid(VB6.Format(mOTHours, "HH:mm"), 1, 2)) + (Val(Mid(VB6.Format(mOTHours, "HH:mm"), 4, 2)) / 60) ''Val(VB.Left(CStr(mOTHours), 2)) + (CDbl(VB.Right(CStr(mOTHours), 2)) / 60)
 
         If mCode <> "" Then
             SqlStr = " DELETE FROM PAY_DALIY_ATTN_TRN " & vbCrLf _

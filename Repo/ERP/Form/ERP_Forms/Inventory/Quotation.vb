@@ -160,6 +160,7 @@ ModifyErr:
         '    mTitle = "Pre-Purchase Order (Indigineious)"
         '
         '    Call ShowReport(SqlStr, mRPTName, Mode, mTitle, mSubTitle, "P")
+
         Exit Sub
 ERR1:
         MsgInformation(Err.Description)

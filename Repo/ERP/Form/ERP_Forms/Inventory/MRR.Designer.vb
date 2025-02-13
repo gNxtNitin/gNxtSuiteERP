@@ -955,7 +955,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.TxtItemDesc.MaxLength = 0
         Me.TxtItemDesc.Name = "TxtItemDesc"
         Me.TxtItemDesc.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.TxtItemDesc.Size = New System.Drawing.Size(233, 22)
+        Me.TxtItemDesc.Size = New System.Drawing.Size(268, 22)
         Me.TxtItemDesc.TabIndex = 19
         '
         'TxtSupplier

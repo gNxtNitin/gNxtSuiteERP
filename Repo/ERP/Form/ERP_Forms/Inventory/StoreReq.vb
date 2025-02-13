@@ -15,6 +15,7 @@ Friend Class FrmStoreReq
     Dim XRIGHT As String
 
     Dim FormActive As Boolean
+    Dim mIsAuthorisedUser As Boolean
 
     Private Const ConRowHeight As Short = 12
     Dim xMyMenu As String
@@ -228,9 +229,11 @@ DelErrPart:
         On Error GoTo ModifyErr
 
         '    If PubUserID <> "G0416" Then
-        If chkIssue.CheckState = System.Windows.Forms.CheckState.Checked Then
-            MsgInformation("Issue Completed, Cann't be Modified")
-            Exit Sub
+        If mIsAuthorisedUser = False Then
+            If chkIssue.CheckState = System.Windows.Forms.CheckState.Checked Then
+                MsgInformation("Issue Completed, Cann't be Modified")
+                Exit Sub
+            End If
         End If
         '    End If
 
@@ -3927,6 +3930,11 @@ ERR1:
         XRIGHT = MainClass.STRMenuRight(PubUserID, CurrModuleID, myMenu, PubDBCn)
         MainClass.RightsToButton(Me, XRIGHT)
         xMyMenu = myMenu
+
+        mIsAuthorisedUser = False
+        If InStr(1, XRIGHT, "S", CompareMethod.Text) > 0 Then
+            mIsAuthorisedUser = True
+        End If
 
         MainClass.SetControlsColor(Me)
         ADDMode = False

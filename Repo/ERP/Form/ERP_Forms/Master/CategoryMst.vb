@@ -87,6 +87,13 @@ ErrorPart:
         optClassification(0).Checked = True
         txtCode.Enabled = True
 
+        ChkBatchRequire.CheckState = System.Windows.Forms.CheckState.Unchecked
+        OptYear.Checked = False
+        OptMonth.Checked = False
+        txtbatchCodePrefix.Text = ""
+        txtbatchCodePrefix.Enabled = True
+
+
         Call AutoCompleteSearch("INV_GENERAL_MST", "GEN_CODE", "GEN_TYPE='" & lblCategory.Text & "'", txtCode)
         Call AutoCompleteSearch("INV_GENERAL_MST", "GEN_DESC", "GEN_TYPE='" & lblCategory.Text & "'", txtDesc)
 
@@ -135,6 +142,7 @@ DeleteErr:
         Dim mHSNCode As Integer
         Dim mAccountCode As String
         Dim mCatClass As Integer
+        Dim mSequenceCode As String
 
         If Not RsGeneral.EOF Then
 
@@ -155,6 +163,7 @@ DeleteErr:
 
             chkAutoIssueSubStore.CheckState = IIf(RsGeneral.Fields("IS_AUTO_ISSUE_SUBSTR").Value = "Y", System.Windows.Forms.CheckState.Checked, System.Windows.Forms.CheckState.Unchecked)
             chkQuotation.CheckState = IIf(RsGeneral.Fields("IS_QUOTATION_REQ").Value = "Y", System.Windows.Forms.CheckState.Checked, System.Windows.Forms.CheckState.Unchecked)
+            ChkBatchRequire.CheckState = IIf(IIf(IsDBNull(RsGeneral.Fields("BATCH_REQUIRE").Value), "0", RsGeneral.Fields("BATCH_REQUIRE").Value) = "1", System.Windows.Forms.CheckState.Checked, System.Windows.Forms.CheckState.Unchecked)
 
 
             'chkIndentItem.Enabled = IIf(chkIndentItem.CheckState = System.Windows.Forms.CheckState.Checked, False, True)
@@ -165,94 +174,105 @@ DeleteErr:
             'chkQFRRequired.Enabled = IIf(chkQFRRequired.CheckState = System.Windows.Forms.CheckState.Checked, False, True)
             'chkMaxLevel.Enabled = IIf(chkMaxLevel.CheckState = System.Windows.Forms.CheckState.Checked, False, True)
 
-            mCatClass = IIf(IsDbNull(RsGeneral.Fields("CAT_CLASS").Value), 0, RsGeneral.Fields("CAT_CLASS").Value)
+            mCatClass = IIf(IsDBNull(RsGeneral.Fields("CAT_CLASS").Value), 0, RsGeneral.Fields("CAT_CLASS").Value)
 
-            optClassification(mCatClass).Checked = True
+                optClassification(mCatClass).Checked = True
 
-            chkAutoMovement.CheckState = IIf(RsGeneral.Fields("AUTO_MOVEMENT").Value = "Y", System.Windows.Forms.CheckState.Checked, System.Windows.Forms.CheckState.Unchecked)
-            mPrdType = IIf(IsDbNull(RsGeneral.Fields("PRD_TYPE").Value), "", RsGeneral.Fields("PRD_TYPE").Value)
+                mSequenceCode = IIf(IsDBNull(RsGeneral.Fields("BATCH_SEQ").Value), "", RsGeneral.Fields("BATCH_SEQ").Value)
+                OptYear.Checked = False
+                OptMonth.Checked = False
+                If (mSequenceCode.ToUpper() = "Y") Then
+                    OptYear.Checked = True
+                ElseIf (mSequenceCode.ToUpper() = "M") Then
+                    OptMonth.Checked = True
+                End If
+                txtbatchCodePrefix.Text = IIf(IsDBNull(RsGeneral.Fields("BATCH_PREFIX").Value), "", RsGeneral.Fields("BATCH_PREFIX").Value)
 
-            '        mHSNCode = IIf(IsNull(RsGeneral.Fields("HSNCODE").Value), 0, RsGeneral.Fields("HSNCODE").Value)	
 
-            '        txtHSNCode.Text = ""	
-            '        lblHSNDesc.text = ""	
-            '	
-            '        If MainClass.ValidateWithMasterTable(mHSNCode, "HSN_CODE", "HSN_DESC", "GEN_HSN_MST", PubDBCn, MasterNo, , "COMPANY_CODE=" & RsCompany.Fields("COMPANY_CODE").Value & "") = True Then	
-            '            txtHSNCode.Text = mHSNCode	
-            '            lblHSNDesc.text = Trim(MasterNo)	
-            '        End If	
+                chkAutoMovement.CheckState = IIf(RsGeneral.Fields("AUTO_MOVEMENT").Value = "Y", System.Windows.Forms.CheckState.Checked, System.Windows.Forms.CheckState.Unchecked)
+                mPrdType = IIf(IsDBNull(RsGeneral.Fields("PRD_TYPE").Value), "", RsGeneral.Fields("PRD_TYPE").Value)
 
-            mAccountCode = IIf(IsDbNull(RsGeneral.Fields("ACCT_CONSUM_CODE").Value), 0, RsGeneral.Fields("ACCT_CONSUM_CODE").Value)
-            If MainClass.ValidateWithMasterTable(mAccountCode, "SUPP_CUST_CODE", "SUPP_CUST_NAME", "FIN_SUPP_CUST_MST", PubDBCn, MasterNo, , "COMPANY_CODE=" & RsCompany.Fields("COMPANY_CODE").Value & "") = True Then
-                txtAcctConsumption.Text = Trim(MasterNo)
-            Else
-                txtAcctConsumption.Text = ""
-            End If
+                '        mHSNCode = IIf(IsNull(RsGeneral.Fields("HSNCODE").Value), 0, RsGeneral.Fields("HSNCODE").Value)	
 
-            If mPrdType = "G" Then
-                CboType.SelectedIndex = 0
-            ElseIf mPrdType = "P" Then
-                CboType.SelectedIndex = 1
-            ElseIf mPrdType = "J" Then
-                CboType.SelectedIndex = 2
-            ElseIf mPrdType = "C" Then
-                CboType.SelectedIndex = 3
-            ElseIf mPrdType = "T" Then
-                CboType.SelectedIndex = 4
-            ElseIf mPrdType = "A" Then
-                CboType.SelectedIndex = 5
-            ElseIf mPrdType = "R" Then
-                CboType.SelectedIndex = 6
-            ElseIf mPrdType = "B" Then
-                CboType.SelectedIndex = 7
-            ElseIf mPrdType = "I" Then
-                CboType.SelectedIndex = 8
-            ElseIf mPrdType = "D" Then
-                CboType.SelectedIndex = 9
-            ElseIf mPrdType = "M" Then
-                CboType.SelectedIndex = 10
-            ElseIf mPrdType = "E" Then
-                CboType.SelectedIndex = 11
-            ElseIf mPrdType = "S" Then
-                CboType.SelectedIndex = 12
-            ElseIf mPrdType = "1" Then
-                CboType.SelectedIndex = 13
-            ElseIf mPrdType = "2" Then
-                CboType.SelectedIndex = 14
-            ElseIf mPrdType = "3" Then
-                CboType.SelectedIndex = 15
-            Else
-                CboType.SelectedIndex = 16
-            End If
+                '        txtHSNCode.Text = ""	
+                '        lblHSNDesc.text = ""	
+                '	
+                '        If MainClass.ValidateWithMasterTable(mHSNCode, "HSN_CODE", "HSN_DESC", "GEN_HSN_MST", PubDBCn, MasterNo, , "COMPANY_CODE=" & RsCompany.Fields("COMPANY_CODE").Value & "") = True Then	
+                '            txtHSNCode.Text = mHSNCode	
+                '            lblHSNDesc.text = Trim(MasterNo)	
+                '        End If	
 
-            If IsDbNull(RsGeneral.Fields("SALEINVTYPECODE").Value) Then
-                txtSales.Text = ""
-            Else
-                If MainClass.ValidateWithMasterTable(RsGeneral.Fields("SALEINVTYPECODE").Value, "CODE", "NAME", "FIN_INVTYPE_MST", PubDBCn, MasterNo, , "COMPANY_CODE=" & RsCompany.Fields("COMPANY_CODE").Value & "  AND CATEGORY='S'") = True Then
-                    txtSales.Text = MasterNo
+                mAccountCode = IIf(IsDBNull(RsGeneral.Fields("ACCT_CONSUM_CODE").Value), 0, RsGeneral.Fields("ACCT_CONSUM_CODE").Value)
+                If MainClass.ValidateWithMasterTable(mAccountCode, "SUPP_CUST_CODE", "SUPP_CUST_NAME", "FIN_SUPP_CUST_MST", PubDBCn, MasterNo, , "COMPANY_CODE=" & RsCompany.Fields("COMPANY_CODE").Value & "") = True Then
+                    txtAcctConsumption.Text = Trim(MasterNo)
                 Else
+                    txtAcctConsumption.Text = ""
+                End If
+
+                If mPrdType = "G" Then
+                    CboType.SelectedIndex = 0
+                ElseIf mPrdType = "P" Then
+                    CboType.SelectedIndex = 1
+                ElseIf mPrdType = "J" Then
+                    CboType.SelectedIndex = 2
+                ElseIf mPrdType = "C" Then
+                    CboType.SelectedIndex = 3
+                ElseIf mPrdType = "T" Then
+                    CboType.SelectedIndex = 4
+                ElseIf mPrdType = "A" Then
+                    CboType.SelectedIndex = 5
+                ElseIf mPrdType = "R" Then
+                    CboType.SelectedIndex = 6
+                ElseIf mPrdType = "B" Then
+                    CboType.SelectedIndex = 7
+                ElseIf mPrdType = "I" Then
+                    CboType.SelectedIndex = 8
+                ElseIf mPrdType = "D" Then
+                    CboType.SelectedIndex = 9
+                ElseIf mPrdType = "M" Then
+                    CboType.SelectedIndex = 10
+                ElseIf mPrdType = "E" Then
+                    CboType.SelectedIndex = 11
+                ElseIf mPrdType = "S" Then
+                    CboType.SelectedIndex = 12
+                ElseIf mPrdType = "1" Then
+                    CboType.SelectedIndex = 13
+                ElseIf mPrdType = "2" Then
+                    CboType.SelectedIndex = 14
+                ElseIf mPrdType = "3" Then
+                    CboType.SelectedIndex = 15
+                Else
+                    CboType.SelectedIndex = 16
+                End If
+
+                If IsDBNull(RsGeneral.Fields("SALEINVTYPECODE").Value) Then
                     txtSales.Text = ""
-                End If
-            End If
-
-            If IsDbNull(RsGeneral.Fields("PURCHASEINVTYPECODE").Value) Then
-                txtPurchase.Text = ""
-            Else
-                If MainClass.ValidateWithMasterTable(RsGeneral.Fields("PURCHASEINVTYPECODE").Value, "CODE", "NAME", "FIN_INVTYPE_MST", PubDBCn, MasterNo, , "COMPANY_CODE=" & RsCompany.Fields("COMPANY_CODE").Value & "  AND CATEGORY='P'") = True Then
-                    txtPurchase.Text = MasterNo
                 Else
-                    txtPurchase.Text = ""
+                    If MainClass.ValidateWithMasterTable(RsGeneral.Fields("SALEINVTYPECODE").Value, "CODE", "NAME", "FIN_INVTYPE_MST", PubDBCn, MasterNo, , "COMPANY_CODE=" & RsCompany.Fields("COMPANY_CODE").Value & "  AND CATEGORY='S'") = True Then
+                        txtSales.Text = MasterNo
+                    Else
+                        txtSales.Text = ""
+                    End If
                 End If
+
+                If IsDBNull(RsGeneral.Fields("PURCHASEINVTYPECODE").Value) Then
+                    txtPurchase.Text = ""
+                Else
+                    If MainClass.ValidateWithMasterTable(RsGeneral.Fields("PURCHASEINVTYPECODE").Value, "CODE", "NAME", "FIN_INVTYPE_MST", PubDBCn, MasterNo, , "COMPANY_CODE=" & RsCompany.Fields("COMPANY_CODE").Value & "  AND CATEGORY='P'") = True Then
+                        txtPurchase.Text = MasterNo
+                    Else
+                        txtPurchase.Text = ""
+                    End If
+                End If
+
+                lblAddUser.Text = IIf(IsDBNull(RsGeneral.Fields("ADDUSER").Value), "", RsGeneral.Fields("ADDUSER").Value)
+                lblAddDate.Text = VB6.Format(IIf(IsDBNull(RsGeneral.Fields("ADDDATE").Value), "", RsGeneral.Fields("ADDDATE").Value), "dd/MM/yyyy")
+                lblModUser.Text = IIf(IsDBNull(RsGeneral.Fields("MODUSER").Value), "", RsGeneral.Fields("MODUSER").Value)
+                lblModDate.Text = VB6.Format(IIf(IsDBNull(RsGeneral.Fields("MODDATE").Value), "", RsGeneral.Fields("MODDATE").Value), "dd/MM/yyyy")
+
+                xCode = RsGeneral.Fields("GEN_CODE").Value
             End If
-
-            lblAddUser.Text = IIf(IsDbNull(RsGeneral.Fields("ADDUSER").Value), "", RsGeneral.Fields("ADDUSER").Value)
-            lblAddDate.Text = VB6.Format(IIf(IsDBNull(RsGeneral.Fields("ADDDATE").Value), "", RsGeneral.Fields("ADDDATE").Value), "dd/MM/yyyy")
-            lblModUser.Text = IIf(IsDBNull(RsGeneral.Fields("MODUSER").Value), "", RsGeneral.Fields("MODUSER").Value)
-            lblModDate.Text = VB6.Format(IIf(IsDBNull(RsGeneral.Fields("MODDATE").Value), "", RsGeneral.Fields("MODDATE").Value), "dd/MM/yyyy")
-
-            xCode = RsGeneral.Fields("GEN_CODE").Value
-        End If
-        txtCode.Enabled = True
+            txtCode.Enabled = True
         ADDMode = False
         MODIFYMode = False
         MainClass.ButtonStatus(Me, XRIGHT, RsGeneral, ADDMode, MODIFYMode, CmdAdd, CmdModify, CmdClose, CmdSave, CmdDelete, cmdSavePrint, cmdSavePrint, cmdPrint, CmdPreview, cmdSavePrint, CmdView, True)
@@ -285,6 +305,9 @@ ShowErrPart:
         Dim mAutoIssueSubStr As String
         Dim mQuotation As String
 
+        Dim mBatchRequire As String
+        Dim mBatchSequence As String
+
         PubDBCn.Errors.Clear()
         PubDBCn.BeginTrans()
 
@@ -302,6 +325,14 @@ ShowErrPart:
 
         mAutoIssueSubStr = IIf(chkAutoIssueSubStore.CheckState = System.Windows.Forms.CheckState.Checked, "Y", "N")
         mQuotation = IIf(chkQuotation.CheckState = System.Windows.Forms.CheckState.Checked, "Y", "N")
+
+        mBatchRequire = IIf(ChkBatchRequire.CheckState = System.Windows.Forms.CheckState.Checked, "1", "0")
+
+        If OptYear.Checked = True Then
+            mBatchSequence = "Y"
+        ElseIf OptMonth.Checked = True Then
+            mBatchSequence = "M"
+        End If
 
         If optClassification(0).Checked = True Then
             mCatClass = 0
@@ -352,7 +383,7 @@ ShowErrPart:
                                  & " ADDUSER, ADDDATE, MODUSER, MODDATE,ACCT_CONSUM_CODE,AUTO_MOVEMENT," & vbCrLf _
                                  & " SALEINVTYPECODE , PURCHASEINVTYPECODE, " & vbCrLf _
                                  & " IS_INDENT_ITEM, IS_BOM_ITEM, IS_COSTING_REQ," & vbCrLf _
-                                 & " IS_TC_REQ, IS_TPI_REQ, IS_QFR_REQ, MAX_LEVEL_CHECK, CAT_CLASS,IS_AUTO_ISSUE_SUBSTR,CODE_PREFIX,IS_QUOTATION_REQ" & vbCrLf _
+                                 & " IS_TC_REQ, IS_TPI_REQ, IS_QFR_REQ, MAX_LEVEL_CHECK, CAT_CLASS,IS_AUTO_ISSUE_SUBSTR,CODE_PREFIX,IS_QUOTATION_REQ,BATCH_REQUIRE,BATCH_SEQ,BATCH_PREFIX" & vbCrLf _
                                  & " ) VALUES ( " & vbCrLf _
                                  & " " & xCompanyCode & ", " & vbCrLf _
                                  & " '" & MainClass.AllowSingleQuote(txtCode.Text) & "', " & vbCrLf _
@@ -361,7 +392,7 @@ ShowErrPart:
                                  & " '" & MainClass.AllowSingleQuote(PubUserID) & "',TO_DATE('" & VB6.Format(PubCurrDate, "dd-MMM-yyyy") & "','DD-MON-YYYY'),'','','" & MainClass.AllowSingleQuote(mAcctConsumptionCode) & "', " & vbCrLf _
                                  & " '" & mAutoMovement & "','" & mSalesPostCode & "', '" & mPurchasePostCode & "', " & vbCrLf _
                                  & " '" & mIndentItem & "','" & mBOMItem & "', '" & mCostingRequired & "', " & vbCrLf _
-                                 & " '" & mTCRequired & "','" & mTPReport & "', '" & mQFRRequired & "','" & mMaxLevelCheck & "'," & mCatClass & ",'" & mAutoIssueSubStr & "','" & MainClass.AllowSingleQuote(txtItemPrefix.Text) & "','" & mQuotation & "')"
+                                 & " '" & mTCRequired & "','" & mTPReport & "', '" & mQFRRequired & "','" & mMaxLevelCheck & "'," & mCatClass & ",'" & mAutoIssueSubStr & "','" & MainClass.AllowSingleQuote(txtItemPrefix.Text) & "','" & mQuotation & "','" & mBatchRequire & "','" & mBatchSequence & "','" & MainClass.AllowSingleQuote(txtbatchCodePrefix.Text) & "')"
                 Else
                     SqlStr = " UPDATE INV_GENERAL_MST  SET " & vbCrLf _
                                 & " GEN_DESC='" & MainClass.AllowSingleQuote(txtDesc.Text) & "'," & vbCrLf _
@@ -376,7 +407,7 @@ ShowErrPart:
                                 & " IS_BOM_ITEM='" & mBOMItem & "', " & vbCrLf _
                                 & " IS_COSTING_REQ='" & mCostingRequired & "', " & vbCrLf & " IS_TC_REQ='" & mTCRequired & "', " & vbCrLf _
                                 & " IS_TPI_REQ='" & mTPReport & "', IS_QUOTATION_REQ='" & mQuotation & "'," & vbCrLf _
-                                & " IS_QFR_REQ='" & mQFRRequired & "', IS_AUTO_ISSUE_SUBSTR='" & mAutoIssueSubStr & "',CODE_PREFIX='" & MainClass.AllowSingleQuote(txtItemPrefix.Text) & "'" & vbCrLf _
+                                & " IS_QFR_REQ='" & mQFRRequired & "', IS_AUTO_ISSUE_SUBSTR='" & mAutoIssueSubStr & "',CODE_PREFIX='" & MainClass.AllowSingleQuote(txtItemPrefix.Text) & "',BATCH_REQUIRE='" & mBatchRequire & "',BATCH_SEQ='" & mBatchSequence & "',BATCH_PREFIX ='" & MainClass.AllowSingleQuote(txtbatchCodePrefix.Text) & "'" & vbCrLf _
                                 & " WHERE COMPANY_CODE=" & xCompanyCode & "" & vbCrLf _
                                 & " AND GEN_CODE= '" & xCode & "'" & vbCrLf _
                                 & " AND GEN_TYPE='" & lblCategory.Text & "'"
@@ -819,6 +850,18 @@ DelErrPart:
 
         optClassification(3).Visible = IIf(lblCategory.Text = "C", True, False)
         optClassification(3).Enabled = IIf(lblCategory.Text = "C", True, False)
+
+        ChkBatchRequire.Visible = IIf(lblCategory.Text = "C", True, False)
+        ChkBatchRequire.Enabled = IIf(lblCategory.Text = "C", True, False)
+
+        OptYear.Visible = IIf(lblCategory.Text = "C", True, False)
+        OptYear.Enabled = IIf(lblCategory.Text = "C", True, False)
+
+        OptMonth.Visible = IIf(lblCategory.Text = "C", True, False)
+        OptMonth.Enabled = IIf(lblCategory.Text = "C", True, False)
+
+        lblBatchPrefix.Enabled = IIf(lblCategory.Text = "C", True, False)
+        txtbatchCodePrefix.Enabled = IIf(lblCategory.Text = "C", True, False)
 
 
         If RsCompany.Fields("AUTO_ISSUE").Value = "N" Then

@@ -3,6 +3,7 @@ Imports System.Data.OleDb
 Imports ADODB
 Imports Microsoft.VisualBasic.Compatibility
 Imports System.ComponentModel
+Imports Microsoft.Win32
 
 Public Class FrmLogin
     Dim cmd As OleDbCommand = Nothing
@@ -45,7 +46,6 @@ Public Class FrmLogin
         Dim mFYear As Long
         Dim mIsAdmin As String = "N"
         Dim mZeroRepeatNo As Integer
-
         If MainClass.ValidateWithMasterTable(cboCompany.Text, "COMPANY_NAME", "COMPANY_CODE", "GEN_COMPANY_MST", PubDBCn, MasterNo) = True Then
             mCompanyCode = Val(MasterNo)
         End If
@@ -824,10 +824,10 @@ ValidateERR:
                             txtRunDate.Text = VB6.Format(Convert.ToDateTime(GetServerDate), "dd/MM/yyyy")
                         End If
                     Else
-                            txtRunDate.Text = GetFYStartEndDate(PubDBCn, "END_DATE", cboFYear.Text)
+                        txtRunDate.Text = GetFYStartEndDate(PubDBCn, "END_DATE", cboFYear.Text)
                     End If
                 End If
-                End If
+            End If
 
 
 

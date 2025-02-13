@@ -4060,6 +4060,7 @@ ErrPart:
         Dim mInterUnit As String = "N"
         Dim mDeliveryToCode As String = ""
         Dim mDeliveryToLoc As String = ""
+        Dim mBatchPrefix As String = ""
 
         PubDBCn.Errors.Clear()
         PubDBCn.BeginTrans()
@@ -5272,6 +5273,10 @@ AutoGenSeqNoErr:
 
                 .Col = ColItemDesc
                 mWOItemDesc = Trim(.Text)
+
+                If (mBatchNo.Length <= 0) Then
+                    mBatchNo = BatchPreFixModule.GetBatchPrefixCode(mItemCode, VB6.Format(RunDate, "DD/MM/YYYY"))
+                End If
 
                 SqlStr = ""
 
@@ -11602,7 +11607,6 @@ FillErr2:
         'Me.Height = VB6.TwipsToPixelsY(7245) '8000						
         ''Me.Width = VB6.TwipsToPixelsX(11355) '11900						
 
-
         Call FillCombo()
 
         'AdataItem.Visible = False
@@ -12322,6 +12326,19 @@ NextRed:
 ErrPart:
         ErrorMsg(Err.Description, CStr(Err.Number), MsgBoxStyle.Critical)
         GetItemDescription = ""
+    End Function
+
+    Public Function BatchPrefix()
+        On Error GoTo ErrPart
+        Dim SqlStr As String = ""
+        Dim RsTemp As ADODB.Recordset = Nothing
+        ''SqlStr = "SELECT BATCH_REQUIRE,BATCH_SEQ,BATCH_PREFIX FROM INV_GENERAL_MST " & vbCrLf & " WHERE GEN_CODE ='" & abcd & "'"
+
+        ''MainClass.UOpenRecordSet(SqlStr, PubDBCn, ADODB.CursorTypeEnum.adOpenStatic, RsTemp, ADODB.LockTypeEnum.adLockReadOnly)
+        Dim ab = RsTemp
+        Exit Function
+ErrPart:
+        ErrorMsg(Err.Description, CStr(Err.Number), MsgBoxStyle.Critical)
     End Function
 
 End Class

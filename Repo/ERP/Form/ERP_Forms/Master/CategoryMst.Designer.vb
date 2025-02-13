@@ -101,6 +101,12 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.CmdModify = New System.Windows.Forms.Button()
         Me.CmdAdd = New System.Windows.Forms.Button()
         Me.FraView = New System.Windows.Forms.GroupBox()
+        Me.txtbatchCodePrefix = New System.Windows.Forms.TextBox()
+        Me.lblBatchPrefix = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.OptMonth = New System.Windows.Forms.RadioButton()
+        Me.OptYear = New System.Windows.Forms.RadioButton()
+        Me.ChkBatchRequire = New System.Windows.Forms.CheckBox()
         Me.txtItemPrefix = New System.Windows.Forms.TextBox()
         Me.lblItemCodePrefix = New System.Windows.Forms.Label()
         Me.Frame2 = New System.Windows.Forms.GroupBox()
@@ -111,6 +117,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me._optClassification_3 = New System.Windows.Forms.RadioButton()
         Me._optClassification_2 = New System.Windows.Forms.RadioButton()
         Me._optClassification_1 = New System.Windows.Forms.RadioButton()
+        Me.Report1 = New AxCrystal.AxCrystalReport()
         Me.chkMaxLevel = New System.Windows.Forms.CheckBox()
         Me.chkAutoMovement = New System.Windows.Forms.CheckBox()
         Me.chkER1 = New System.Windows.Forms.CheckBox()
@@ -129,7 +136,6 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.CboType = New System.Windows.Forms.ComboBox()
         Me.txtStockType = New System.Windows.Forms.TextBox()
         Me.txtDesc = New System.Windows.Forms.TextBox()
-        Me.Report1 = New AxCrystal.AxCrystalReport()
         Me.txtCode = New System.Windows.Forms.TextBox()
         Me.lblAcctConsumption = New System.Windows.Forms.Label()
         Me.lblModDate = New System.Windows.Forms.Label()
@@ -152,10 +158,11 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.lblLabels = New Microsoft.VisualBasic.Compatibility.VB6.LabelArray(Me.components)
         Me.optClassification = New Microsoft.VisualBasic.Compatibility.VB6.RadioButtonArray(Me.components)
         Me.FraView.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.Frame2.SuspendLayout()
         Me.Frame3.SuspendLayout()
-        Me.Frame1.SuspendLayout()
         CType(Me.Report1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Frame1.SuspendLayout()
         Me.FraGridView.SuspendLayout()
         CType(Me.SprdView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.FraMovement.SuspendLayout()
@@ -171,7 +178,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.cmdSavePrint.ForeColor = System.Drawing.SystemColors.ControlText
         Me.cmdSavePrint.Image = CType(resources.GetObject("cmdSavePrint.Image"), System.Drawing.Image)
         Me.cmdSavePrint.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.cmdSavePrint.Location = New System.Drawing.Point(182, 12)
+        Me.cmdSavePrint.Location = New System.Drawing.Point(182, 10)
         Me.cmdSavePrint.Name = "cmdSavePrint"
         Me.cmdSavePrint.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdSavePrint.Size = New System.Drawing.Size(60, 33)
@@ -189,7 +196,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.cmdPreview.ForeColor = System.Drawing.SystemColors.ControlText
         Me.cmdPreview.Image = CType(resources.GetObject("cmdPreview.Image"), System.Drawing.Image)
         Me.cmdPreview.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.cmdPreview.Location = New System.Drawing.Point(362, 12)
+        Me.cmdPreview.Location = New System.Drawing.Point(362, 10)
         Me.cmdPreview.Name = "cmdPreview"
         Me.cmdPreview.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdPreview.Size = New System.Drawing.Size(60, 33)
@@ -207,7 +214,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.cmdPrint.ForeColor = System.Drawing.SystemColors.ControlText
         Me.cmdPrint.Image = CType(resources.GetObject("cmdPrint.Image"), System.Drawing.Image)
         Me.cmdPrint.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.cmdPrint.Location = New System.Drawing.Point(302, 12)
+        Me.cmdPrint.Location = New System.Drawing.Point(302, 10)
         Me.cmdPrint.Name = "cmdPrint"
         Me.cmdPrint.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdPrint.Size = New System.Drawing.Size(60, 34)
@@ -225,7 +232,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.CmdClose.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CmdClose.Image = CType(resources.GetObject("CmdClose.Image"), System.Drawing.Image)
         Me.CmdClose.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CmdClose.Location = New System.Drawing.Point(482, 12)
+        Me.CmdClose.Location = New System.Drawing.Point(482, 10)
         Me.CmdClose.Name = "CmdClose"
         Me.CmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.CmdClose.Size = New System.Drawing.Size(60, 34)
@@ -243,7 +250,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.CmdView.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CmdView.Image = CType(resources.GetObject("CmdView.Image"), System.Drawing.Image)
         Me.CmdView.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CmdView.Location = New System.Drawing.Point(422, 12)
+        Me.CmdView.Location = New System.Drawing.Point(422, 10)
         Me.CmdView.Name = "CmdView"
         Me.CmdView.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.CmdView.Size = New System.Drawing.Size(60, 34)
@@ -261,7 +268,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.CmdSave.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CmdSave.Image = CType(resources.GetObject("CmdSave.Image"), System.Drawing.Image)
         Me.CmdSave.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CmdSave.Location = New System.Drawing.Point(122, 12)
+        Me.CmdSave.Location = New System.Drawing.Point(122, 10)
         Me.CmdSave.Name = "CmdSave"
         Me.CmdSave.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.CmdSave.Size = New System.Drawing.Size(60, 34)
@@ -279,7 +286,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.CmdDelete.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CmdDelete.Image = CType(resources.GetObject("CmdDelete.Image"), System.Drawing.Image)
         Me.CmdDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CmdDelete.Location = New System.Drawing.Point(242, 12)
+        Me.CmdDelete.Location = New System.Drawing.Point(242, 10)
         Me.CmdDelete.Name = "CmdDelete"
         Me.CmdDelete.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.CmdDelete.Size = New System.Drawing.Size(60, 34)
@@ -297,7 +304,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.CmdModify.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CmdModify.Image = CType(resources.GetObject("CmdModify.Image"), System.Drawing.Image)
         Me.CmdModify.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CmdModify.Location = New System.Drawing.Point(62, 12)
+        Me.CmdModify.Location = New System.Drawing.Point(62, 10)
         Me.CmdModify.Name = "CmdModify"
         Me.CmdModify.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.CmdModify.Size = New System.Drawing.Size(60, 34)
@@ -315,7 +322,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.CmdAdd.ForeColor = System.Drawing.SystemColors.ControlText
         Me.CmdAdd.Image = CType(resources.GetObject("CmdAdd.Image"), System.Drawing.Image)
         Me.CmdAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CmdAdd.Location = New System.Drawing.Point(2, 12)
+        Me.CmdAdd.Location = New System.Drawing.Point(2, 10)
         Me.CmdAdd.Name = "CmdAdd"
         Me.CmdAdd.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.CmdAdd.Size = New System.Drawing.Size(60, 34)
@@ -328,6 +335,10 @@ Imports Microsoft.VisualBasic.Compatibility
         'FraView
         '
         Me.FraView.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.FraView.Controls.Add(Me.txtbatchCodePrefix)
+        Me.FraView.Controls.Add(Me.lblBatchPrefix)
+        Me.FraView.Controls.Add(Me.GroupBox1)
+        Me.FraView.Controls.Add(Me.ChkBatchRequire)
         Me.FraView.Controls.Add(Me.txtItemPrefix)
         Me.FraView.Controls.Add(Me.lblItemCodePrefix)
         Me.FraView.Controls.Add(Me.Frame2)
@@ -336,7 +347,6 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.FraView.Controls.Add(Me.CboType)
         Me.FraView.Controls.Add(Me.txtStockType)
         Me.FraView.Controls.Add(Me.txtDesc)
-        Me.FraView.Controls.Add(Me.Report1)
         Me.FraView.Controls.Add(Me.txtCode)
         Me.FraView.Controls.Add(Me.lblAcctConsumption)
         Me.FraView.Controls.Add(Me.lblModDate)
@@ -358,9 +368,86 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.FraView.Name = "FraView"
         Me.FraView.Padding = New System.Windows.Forms.Padding(0)
         Me.FraView.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.FraView.Size = New System.Drawing.Size(542, 348)
+        Me.FraView.Size = New System.Drawing.Size(542, 431)
         Me.FraView.TabIndex = 15
         Me.FraView.TabStop = False
+        '
+        'txtbatchCodePrefix
+        '
+        Me.txtbatchCodePrefix.AcceptsReturn = True
+        Me.txtbatchCodePrefix.BackColor = System.Drawing.SystemColors.Window
+        Me.txtbatchCodePrefix.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtbatchCodePrefix.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtbatchCodePrefix.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbatchCodePrefix.ForeColor = System.Drawing.Color.Blue
+        Me.txtbatchCodePrefix.Location = New System.Drawing.Point(152, 166)
+        Me.txtbatchCodePrefix.MaxLength = 0
+        Me.txtbatchCodePrefix.Name = "txtbatchCodePrefix"
+        Me.txtbatchCodePrefix.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtbatchCodePrefix.Size = New System.Drawing.Size(90, 22)
+        Me.txtbatchCodePrefix.TabIndex = 50
+        '
+        'lblBatchPrefix
+        '
+        Me.lblBatchPrefix.AutoSize = True
+        Me.lblBatchPrefix.BackColor = System.Drawing.Color.Transparent
+        Me.lblBatchPrefix.Cursor = System.Windows.Forms.Cursors.Default
+        Me.lblBatchPrefix.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBatchPrefix.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblBatchPrefix.Location = New System.Drawing.Point(38, 171)
+        Me.lblBatchPrefix.Name = "lblBatchPrefix"
+        Me.lblBatchPrefix.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.lblBatchPrefix.Size = New System.Drawing.Size(103, 13)
+        Me.lblBatchPrefix.TabIndex = 51
+        Me.lblBatchPrefix.Text = "Batch Code Prefix :"
+        Me.lblBatchPrefix.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.OptMonth)
+        Me.GroupBox1.Controls.Add(Me.OptYear)
+        Me.GroupBox1.Location = New System.Drawing.Point(180, 193)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(261, 42)
+        Me.GroupBox1.TabIndex = 49
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Batch Seq"
+        '
+        'OptMonth
+        '
+        Me.OptMonth.AutoSize = True
+        Me.OptMonth.Location = New System.Drawing.Point(143, 16)
+        Me.OptMonth.Name = "OptMonth"
+        Me.OptMonth.Size = New System.Drawing.Size(67, 17)
+        Me.OptMonth.TabIndex = 1
+        Me.OptMonth.TabStop = True
+        Me.OptMonth.Text = "Monthly"
+        Me.OptMonth.UseVisualStyleBackColor = True
+        '
+        'OptYear
+        '
+        Me.OptYear.AutoSize = True
+        Me.OptYear.Location = New System.Drawing.Point(26, 16)
+        Me.OptYear.Name = "OptYear"
+        Me.OptYear.Size = New System.Drawing.Size(55, 17)
+        Me.OptYear.TabIndex = 0
+        Me.OptYear.TabStop = True
+        Me.OptYear.Text = "Yearly"
+        Me.OptYear.UseVisualStyleBackColor = True
+        '
+        'ChkBatchRequire
+        '
+        Me.ChkBatchRequire.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.ChkBatchRequire.Cursor = System.Windows.Forms.Cursors.Default
+        Me.ChkBatchRequire.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkBatchRequire.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.ChkBatchRequire.Location = New System.Drawing.Point(52, 199)
+        Me.ChkBatchRequire.Name = "ChkBatchRequire"
+        Me.ChkBatchRequire.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.ChkBatchRequire.Size = New System.Drawing.Size(107, 36)
+        Me.ChkBatchRequire.TabIndex = 48
+        Me.ChkBatchRequire.Text = ": Batch Require"
+        Me.ChkBatchRequire.UseVisualStyleBackColor = False
         '
         'txtItemPrefix
         '
@@ -409,7 +496,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.Frame2.Controls.Add(Me.chkIndentItem)
         Me.Frame2.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Frame2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Frame2.Location = New System.Drawing.Point(4, 222)
+        Me.Frame2.Location = New System.Drawing.Point(4, 302)
         Me.Frame2.Name = "Frame2"
         Me.Frame2.Padding = New System.Windows.Forms.Padding(0)
         Me.Frame2.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -452,6 +539,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.Frame3.Controls.Add(Me._optClassification_3)
         Me.Frame3.Controls.Add(Me._optClassification_2)
         Me.Frame3.Controls.Add(Me._optClassification_1)
+        Me.Frame3.Controls.Add(Me.Report1)
         Me.Frame3.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Frame3.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Frame3.Location = New System.Drawing.Point(410, 0)
@@ -526,6 +614,15 @@ Imports Microsoft.VisualBasic.Compatibility
         Me._optClassification_1.TabStop = True
         Me._optClassification_1.Text = "Locks"
         Me._optClassification_1.UseVisualStyleBackColor = False
+        '
+        'Report1
+        '
+        Me.Report1.Enabled = True
+        Me.Report1.Location = New System.Drawing.Point(73, 16)
+        Me.Report1.Name = "Report1"
+        Me.Report1.OcxState = CType(resources.GetObject("Report1.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.Report1.Size = New System.Drawing.Size(28, 28)
+        Me.Report1.TabIndex = 45
         '
         'chkMaxLevel
         '
@@ -662,7 +759,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.Frame1.Controls.Add(Me.Label1)
         Me.Frame1.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Frame1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Frame1.Location = New System.Drawing.Point(4, 164)
+        Me.Frame1.Location = New System.Drawing.Point(4, 245)
         Me.Frame1.Name = "Frame1"
         Me.Frame1.Padding = New System.Windows.Forms.Padding(0)
         Me.Frame1.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -787,15 +884,6 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.txtDesc.Size = New System.Drawing.Size(287, 22)
         Me.txtDesc.TabIndex = 3
         '
-        'Report1
-        '
-        Me.Report1.Enabled = True
-        Me.Report1.Location = New System.Drawing.Point(486, 232)
-        Me.Report1.Name = "Report1"
-        Me.Report1.OcxState = CType(resources.GetObject("Report1.OcxState"), System.Windows.Forms.AxHost.State)
-        Me.Report1.Size = New System.Drawing.Size(28, 28)
-        Me.Report1.TabIndex = 45
-        '
         'txtCode
         '
         Me.txtCode.AcceptsReturn = True
@@ -833,7 +921,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.lblModDate.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblModDate.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblModDate.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblModDate.Location = New System.Drawing.Point(463, 323)
+        Me.lblModDate.Location = New System.Drawing.Point(462, 405)
         Me.lblModDate.Name = "lblModDate"
         Me.lblModDate.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblModDate.Size = New System.Drawing.Size(69, 19)
@@ -846,7 +934,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.Label48.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label48.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label48.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label48.Location = New System.Drawing.Point(404, 325)
+        Me.Label48.Location = New System.Drawing.Point(403, 407)
         Me.Label48.Name = "Label48"
         Me.Label48.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label48.Size = New System.Drawing.Size(63, 15)
@@ -861,7 +949,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.lblAddDate.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblAddDate.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAddDate.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblAddDate.Location = New System.Drawing.Point(201, 323)
+        Me.lblAddDate.Location = New System.Drawing.Point(200, 405)
         Me.lblAddDate.Name = "lblAddDate"
         Me.lblAddDate.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblAddDate.Size = New System.Drawing.Size(69, 19)
@@ -874,7 +962,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.Label45.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label45.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label45.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label45.Location = New System.Drawing.Point(141, 325)
+        Me.Label45.Location = New System.Drawing.Point(140, 407)
         Me.Label45.Name = "Label45"
         Me.Label45.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label45.Size = New System.Drawing.Size(63, 15)
@@ -889,7 +977,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.lblModUser.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblModUser.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblModUser.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblModUser.Location = New System.Drawing.Point(331, 323)
+        Me.lblModUser.Location = New System.Drawing.Point(330, 405)
         Me.lblModUser.Name = "lblModUser"
         Me.lblModUser.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblModUser.Size = New System.Drawing.Size(69, 19)
@@ -902,7 +990,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.Label46.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label46.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label46.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label46.Location = New System.Drawing.Point(271, 325)
+        Me.Label46.Location = New System.Drawing.Point(270, 407)
         Me.Label46.Name = "Label46"
         Me.Label46.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label46.Size = New System.Drawing.Size(61, 15)
@@ -917,7 +1005,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.lblAddUser.Cursor = System.Windows.Forms.Cursors.Default
         Me.lblAddUser.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAddUser.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblAddUser.Location = New System.Drawing.Point(69, 323)
+        Me.lblAddUser.Location = New System.Drawing.Point(68, 405)
         Me.lblAddUser.Name = "lblAddUser"
         Me.lblAddUser.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblAddUser.Size = New System.Drawing.Size(69, 19)
@@ -930,7 +1018,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.Label44.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label44.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label44.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label44.Location = New System.Drawing.Point(10, 325)
+        Me.Label44.Location = New System.Drawing.Point(9, 407)
         Me.Label44.Name = "Label44"
         Me.Label44.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label44.Size = New System.Drawing.Size(61, 15)
@@ -1069,11 +1157,11 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.FraMovement.Controls.Add(Me.CmdAdd)
         Me.FraMovement.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FraMovement.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.FraMovement.Location = New System.Drawing.Point(0, 347)
+        Me.FraMovement.Location = New System.Drawing.Point(0, 429)
         Me.FraMovement.Name = "FraMovement"
         Me.FraMovement.Padding = New System.Windows.Forms.Padding(0)
         Me.FraMovement.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.FraMovement.Size = New System.Drawing.Size(545, 49)
+        Me.FraMovement.Size = New System.Drawing.Size(545, 48)
         Me.FraMovement.TabIndex = 17
         Me.FraMovement.TabStop = False
         '
@@ -1085,7 +1173,7 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(545, 397)
+        Me.ClientSize = New System.Drawing.Size(545, 489)
         Me.Controls.Add(Me.FraView)
         Me.Controls.Add(Me.FraGridView)
         Me.Controls.Add(Me.FraMovement)
@@ -1103,11 +1191,13 @@ Imports Microsoft.VisualBasic.Compatibility
         Me.Text = "Category Master"
         Me.FraView.ResumeLayout(False)
         Me.FraView.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.Frame2.ResumeLayout(False)
         Me.Frame3.ResumeLayout(False)
+        CType(Me.Report1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Frame1.ResumeLayout(False)
         Me.Frame1.PerformLayout()
-        CType(Me.Report1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FraGridView.ResumeLayout(False)
         CType(Me.SprdView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.FraMovement.ResumeLayout(False)
@@ -1129,5 +1219,11 @@ Imports Microsoft.VisualBasic.Compatibility
     Public WithEvents txtItemPrefix As TextBox
     Public WithEvents lblItemCodePrefix As Label
     Public WithEvents chkQuotation As CheckBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Public WithEvents ChkBatchRequire As CheckBox
+    Public WithEvents OptMonth As RadioButton
+    Public WithEvents OptYear As RadioButton
+    Public WithEvents txtbatchCodePrefix As TextBox
+    Public WithEvents lblBatchPrefix As Label
 #End Region
 End Class
